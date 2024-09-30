@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadse</title>
+    <link rel="website icon" href="image/logo/logo.png" type="png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .slider-container::-webkit-scrollbar {
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+        } 
+    </style>
+</head>
+<body class="font-['Montserrat'] bg-white">
+    <div class="bg-white py-3 px-10 shadow-xl ">
+        <div class="py-2 flex items-center gap-10 justify-between">
+            <img src="image/logo/typhografi.png" class="w-[25%] md:w-[10%]" alt="">
+            <div class="flex md:justify-between gap-3 md:gap-0 justify-end items-center w-full">
+                <div class="hidden md:flex gap-5 font-semibold text-[19px]">
+                    <a href="#home">Home</a>
+                    <a href="#product">Product</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="flex gap-3 items-center">
+                    <p class="font-semibold text-[20px]" id="user">User</p>
+                    <i class="bi bi-person-circle text-[30px]"></i>
+                </div>
+                <div class="flex md:hidden">
+                    <i class="bi bi-list text-3xl cursor-pointer" id="hamburger"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-black z-10 absolute w-full transition-all opacity-0 pointer-events-none" id="list">
+        <div class="flex md:hidden text-white font-semibold flex-col gap-4 text-[20px] py-5 items-center">
+            <a href="#home">Home</a>
+            <a href="#product">Product</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+    <div id="home"></div>
+    <div class="flex flex-col bg-white md:py-5 gap-5 md:gap-10 md:h-screen justify-center items-center">
+        <div class="bg-white flex items-center font-semibold text-2xl mt-10 md:text-3xl md:mt-0 justify-center">
+            <marquee>Choose ur Style🤩✨</marquee>
+        </div>
+        <div class="w-full md:w-[60%] h-fit relative" id="slider-section">
+            <div class="slider-container overflow-x-auto flex flex-row min-w-fit h-full">
+                <div class="slide min-w-fit">
+                    <img src="image/sti.jpg"  class="min-w-full" alt="">
+                </div>
+                <div class="slide min-w-fit">
+                    <img src="image/erigo.jpg" class="min-w-full" alt="">
+                </div>
+                <div class="slide min-w-fit">
+                    <img src="image/polo.jpg" class="min-w-full" alt="">
+                </div>
+            </div>
+            <div class="absolute w-full h-full inset-0 flex justify-between items-center px-5">
+                <i class="bi bi-arrow-left bg-white opacity-75 cursor-pointer w-10 h-10 rounded-full flex items-center justify-center text-black" id="arrowLeft"></i>
+                <i class="bi bi-arrow-right cursor-pointer bg-white opacity-75 w-10 h-10 rounded-full flex items-center justify-center text-black" id="arrowRight"></i>
+            </div>
+        </div>
+    </div>
+    <div id="product"></div>
+    <div class="mt-10">
+        <div class="flex flex-col items-center">
+            <p class="font-semibold text-2xl">Product</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-5 gap-y-10 md:gap-5 mt-7 px-4 md:px-10">
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modelgucci.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Gucci T shirt</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[13px] md:text-[16px]"><s>Rp.700.000</s></p>
+                            <p class="text-red-600 font-semibold text-[13px] md:text-[16px]">Rp.599.000</p>
+                        </div>
+                        <a href="product page/product1.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modeleiger.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Eiger Jacket</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[13px] md:text-[16px]"><s>Rp.900.000</s></p>
+                            <p class="text-red-600 font-semibold text-[13px] md:text-[16px]">Rp.789.000</p>
+                        </div>
+                        <a href="product page/product2.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modeljeans.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Nudie Jeans</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[13px] md:text-[16px]"><s>Rp.455.000</s></p>
+                            <p class="text-red-600 font-semibold text-[13px] md:text-[16px]">Rp.245.000</p>
+                        </div>
+                        <a href="product page/product3.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modelTNF.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">TheNorthFace black hoodie</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[12px] md:text-[16px]"><s>Rp.1.200.000</s></p>
+                            <p class="text-red-600 font-semibold text-[12px] md:text-[16px]">Rp.999.000</p>
+                        </div>
+                        <a href="product page/product4.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modelherme.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Hermes T-Shirt</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[12px] md:text-[16px]"><s>Rp.1.000.000</s></p>
+                            <p class="text-red-600 font-semibold text-[12px] md:text-[16px]">Rp.799.000</p>
+                        </div>
+                        <a href="product page/product5.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modeljordan.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Air Jordan 1 University blue</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[12px] md:text-[15px]"><s>Rp.3.500.000</s></p>
+                            <p class="text-red-600 font-semibold text-[12px] md:text-[15px]">Rp.3.199.000</p>
+                        </div>
+                        <a href="product page/product6.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modelpolo.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Polo Shirt Classic Men</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[13px] md:text-[16px]"><s>Rp.600.000</s></p>
+                            <p class="text-red-600 font-semibold text-[13px] md:text-[16px]">Rp.499.000</p>
+                        </div>
+                        <a href="product page/product7.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modelsamba.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Adidas Samba</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[12px] md:text-[15px]"><s>Rp.1.500.000</s></p>
+                            <p class="text-red-600 font-semibold text-[12px] md:text-[15px]">Rp.1.199.000</p>
+                        </div>
+                        <a href="product page/product8.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modelshr.png" class="" alt="">
+                    <div class=" flex flex-col gap-3">
+                        <p class="text-[17px] font-semibold truncate">Erigo Project Summer T-Shirt</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[13px] md:text-[16px]"><s>Rp.250.000</s></p>
+                            <p class="text-red-600 font-semibold text-[13px] md:text-[16px]">Rp.199.000</p>
+                        </div>
+                        <a href="product page/product9.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex gap-2 flex-col shadow-lg py-3 px-3">
+                    <img src="image/productModel/modelst.png" class="" alt="">
+                    <div class=" flex flex-col gap-3"></div>
+                        <p class="text-[17px] font-semibold truncate">StoneIsland Aplliqued Black Men</p>
+                        <div class="flex gap-2 flex-wrap">
+                            <p class="text-gray-400 font-semibold text-[13px] md:text-[16px]"><s>Rp.700.000</s></p>
+                            <p class="text-red-600 font-semibold text-[13px] md:text-[16px]">Rp.599.000</p>
+                        </div>
+                        <a href="product page/product10.html" class="flex justify-center bg-red-600 text-white py-1 rounded-lg gap-2">
+                            <i class="bi bi-cart"></i>
+                            <p>Beli</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact"></div>
+    <div class="mt-20">
+        <div class="flex flex-col md:justify-evenly md:flex-row bg-slate-950">
+            <div class="flex flex-col gap-5 px-10  md:py-14 py-10">
+                <p class="text-3xl text-white font-semibold">Contact</p>
+                <div class="text-gray-500 text-[17px] flex flex-col gap-2 font-semibold">
+                    <p class="text-gray-500 font-semibold">Addres : Jalan Daeng Sutigna , Sindangsari, Sindangagung <br></p>
+                    <p>Phone Number : +62 8953-6549-5641</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 px-10  md:py-14 py-10">
+                <p class="text-3xl text-white font-semibold">Menu</p>
+                <div class="text-gray-500 text-[17px] flex flex-col gap-1 font-semibold">
+                    <a href="#home">Home</a>
+                    <a href="#product">Product</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="flex flex-col gap-5 px-10  md:py-14 py-10">
+                <p class="text-3xl text-white font-semibold">Recent Product</p>
+                <div class="text-gray-500 text-[17px] flex flex-col gap-1 font-semibold">
+                    <p>Gucci T-Shirt</p>
+                    <p>Eiger Jacket</p>
+                    <p>Nudie Jeans</p>
+                    <p>The TheNorthFace</p>
+                    <p>Hermes T-Shirt</p>
+                </div>
+            </div>
+            <div class="flex px-10 text-3xl gap-10 md:gap-7 py-10 md:py-14 justify-center">
+                <a href="https://www.instagram.com/nadseeee__?igsh=eDk4d3lyZTRubGs2"><i class="bi bi-instagram text-white"></i></a>
+                <a href="https://wa.me/62895365495641"><i class="bi bi-whatsapp text-white"></i></a>
+                <a href="https://www.tiktok.com/@syabaniimam?_t=8ps8gojiFbm&_r=1"><i class="bi bi-tiktok text-white"></i></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const hamburger = document.getElementById('hamburger')
+        const list = document.getElementById('list')
+        const user = document.getElementById('user')
+        const arrowR = document.getElementById('arrowRight')
+        const arrowL = document.getElementById('arrowLeft')
+        const slider = document.querySelector('.slider-container')
+        const sliderSection = document.getElementById('slider-section')
+        const slideTotal = document.querySelectorAll('.slide').length;
+        let index = 0;
+
+        arrowR.addEventListener('click', function(){
+            index = index === slideTotal - 1 ? 0 : index + 1
+            slider.scrollTo({
+                behavior: 'smooth',
+                left: sliderSection.offsetWidth * index
+            });
+        })
+        arrowL.addEventListener('click', function(){
+            index = index === 0 ? index : index - 1;
+            slider.scrollTo({
+                behavior: 'smooth',
+                left: sliderSection.offsetWidth * index
+            });
+        })
+
+        hamburger.addEventListener('click', function(e){
+            list.classList.toggle('opacity-0')
+            list.classList.toggle('pointer-events-none')
+        })
+
+        window.onload = () => {
+            user.innerHTML = `${localStorage['user']}`
+        }
+
+        function addSlides(params) {
+            
+        }
+
+    </script>
+</body>
+</html>

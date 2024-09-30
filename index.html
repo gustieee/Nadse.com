@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="website icon" href="image/logo.png" type="png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Grey+Qo&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            background-image: url(image/thrifting-4.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        #page {
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="flex font-['Montserrat'] items-center justify-center">
+    <div class="p-11 flex flex-col w-[400px] items-center gap-5 md:gap-10 md:w-[600px] bg-black rounded-md" id="page">
+        <h1 class="text-white text-2xl font-semibold md:text-5xl">Login</h1>
+        <div class="flex gap-2 font-semibold border w-[350px] border-1 p-2 rounded-md md:w-[500px] text-white">
+            <label for="username" class="">Username:</label>
+            <input required type="text" name="username" id="username" class="bg-transparent ">
+        </div>
+        <div class="flex gap-2 items-center w-[350px] font-semibold border border-1 p-2 md:w-[500px] rounded-md text-white">
+            <label for="password" class="">Password: </label>
+            <div class="flex justify-between w-full">
+                <input required type="password" name="password" id="password" class="bg-transparent w-[160px] md:w-[330px]">
+                <i class="bi bi-eye text-2xl px-2 cursor-pointer" id="eye"></i>
+            </div>
+        </div>
+        <div class="flex">
+            <button class="font-semibold text-black bg-white py-2 md:text-3xl px-6 rounded-md" id="button">Login</button>
+        </div>
+    </div>
+    <div class="absolute opacity-0 pointer-events-none" id="popup">
+        <div class="bg-white rounded-md p-10 gap-5 flex flex-col items-center">
+            <p class="text-6xl bg-black text-white w-[60px] flex items-center justify-center rounded-full">!</p>
+            <p class="text-2xl font-semibold">Ada yang belum terisi!!</p>
+            <button class="font-semibold bg-black text-white py-2 px-6 rounded-md" id="buttonW">Coba Lagi</button>
+        </div>
+    </div>
+    <script>
+        const button = document.getElementById('button')
+        const password = document.getElementById('password')
+        const username = document.getElementById('username')
+        const buttonW = document.getElementById('buttonW')
+        const popup = document.getElementById('popup')
+        const eye = document.getElementById('eye')
+
+        eye.addEventListener('click', function(){
+            password.type = password.type === 'text' ? 'password':'text'
+                if(!eye.classList.contains('bi-eye-slash')){
+                    eye.classList.remove('bi-eye')
+                    eye.classList.add('bi-eye-slash')
+                }else{
+                    eye.classList.remove('bi-eye-slash')
+                    eye.classList.add('bi-eye')
+                }
+        })
+
+        button.addEventListener('click', function(){
+            if (username.value == '') {
+                popup.classList.toggle('opacity-0')
+                popup.classList.toggle('pointer-events-none')
+            }else if (password.value == '') {
+                popup.classList.toggle('opacity-0')
+                popup.classList.toggle('pointer-events-none')
+            }else{
+                location.href = 'home.html'
+                localStorage["user"] = username.value 
+            }
+        })
+
+        buttonW.addEventListener('click',function(){
+            popup.classList.toggle('opacity-0')
+            popup.classList.toggle('pointer-events-none')
+        })
+    </script>
+</body>
+</html>
+
